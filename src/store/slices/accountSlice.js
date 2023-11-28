@@ -32,7 +32,7 @@ export const fetchAccount = createAsyncThunk('account/fetchAccount', async (_, {
     if (!getState().keycloak.token) {
         throw new Error("No token available");
     }
-    let res = await fetch("http://localhost:3000/finance/budget", {
+    let res = await fetch("https://finance-backend.schwaemmle.cloud/finance/budget", {
         headers: {
             Authorization: `Bearer ${getState().keycloak.token}`
         }
@@ -48,7 +48,7 @@ export const updateBudget = createAsyncThunk('account/updateBudget', async (budg
     if (!getState().keycloak.token) {
         throw new Error("No token available");
     }
-    let res = await fetch("http://localhost:3000/finance/budget", {
+    let res = await fetch("https://finance-backend.schwaemmle.cloud/finance/budget", {
         method: "POST",
         headers: {
             Authorization: `Bearer ${getState().keycloak.token}`,
