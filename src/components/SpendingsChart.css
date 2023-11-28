@@ -1,0 +1,13 @@
+.spendingsChart-bar {
+    height: 40px;
+    border-radius: 10px;
+    width: 100%;
+    background-color: #eee;
+    border: 1px solid #ddd;
+    overflow: hidden;
+}
+
+.spendingsChart-bar > * {
+    height: 100%;
+    display: inline-flex;
+}
