@@ -37,7 +37,7 @@ export default function Header() {
     return (
         <Flex justify="space-between" align="center" style={{ 'padding': '25px 0' }}>
             <div>
-                <h1 style={{ 'margin': '0', 'color': (budget - spendingsThisMonth) >= 0 ? 'black' : 'red' }}>{budget == null ? formatCurrency(budget - spendingsThisMonth) : 'Loading'}</h1>
+                <h1 style={{ 'margin': '0', 'color': (budget - spendingsThisMonth) >= 0 ? 'black' : 'red' }}>{budget != null ? formatCurrency(budget - spendingsThisMonth) : 'Loading'}</h1>
                 <small>übrig für Mai</small>
             </div>
             <Dropdown arrow={'bottomRight'} menu={{ items: dropdownItems }}>
